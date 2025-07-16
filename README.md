@@ -46,11 +46,14 @@ Product pricing (buying and selling) was dynamically pulled into the Sales Repor
 This acts as a substitute for XLOOKUP and ensures compatibility with older Excel versions.
 
 ### Derived Fields in Sales Report
-Column	Formula Example	Purpose
-Buying Value	=Buying Price × QTY	Total cost of items sold
-Selling Value	=Selling Price × QTY	Total revenue from sales
-Profit	=Selling Value – Buying Value	Total gross profit
-Profit per Unit	=Profit / QTY	Unit-wise profitability for comparison
+
+| Column            | Formula Example                             | Purpose                                 |
+|-------------------|---------------------------------------------|-----------------------------------------|
+| **Buying Value**  | `=Buying Price × QTY`                       | Total cost of items sold                |
+| **Selling Value** | `=Selling Price × QTY`                      | Total income from sales                 |
+| **Profit**        | `=Revenue – Cost`                           | Total gross profit                      |
+| **Profit/Unit**   | `=Profit / QTY`                             | Profit earned for each unit sold        |
+
 These metrics feed directly into pivot tables and dashboard charts.
 
 ## Business Insights Enabled
@@ -62,21 +65,29 @@ These metrics feed directly into pivot tables and dashboard charts.
 
 ## Tools Used
 - Microsoft Excel 
- - PivotTables and PivotCharts
- - Conditional Formatting
- - INDEX + MATCH lookup formulas
- - Combo charts and trendlines
- - Slicers for interactivity
+  - PivotTables and PivotCharts
+  - Conditional Formatting
+  - INDEX + MATCH lookup formulas
+  - Combo charts and trendlines
+  - Slicers for interactivity
 
 ## Notes
 - A data model relationship has been created between the Sales Report and Catalogue tables via PRODUCT ID.
 - Both tables are formatted as Named Tables for cleaner references:
- - sales_report
- - catalogue
+  - sales_report
+  - catalogue
 - While these relationships are not actively used in dashboard visuals, they provide a solid base for future enhancements such as:
- - Power Pivot or Power BI integration
- - Dynamic filtering by category
- - More advanced DAX measures
+  - Power Pivot or Power BI integration
+  - Dynamic filtering by category
+  - More advanced DAX measures
+- In the raw data sheets (e.g., *Sales Report*), column names like `Buying Price`, `Selling Price`, `Buying Value`, and `Selling Value` are used. In the dashboard and README, we refer to them more clearly as:
+  - `Buying Price` → **Unit Cost**
+  - `Selling Price` → **Unit Price**
+  - `Buying Value` → **Cost**
+  - `Selling Value` → **Revenue**
+
+This helps align industry terminology with the visuals in the dashboard.
+
 
 ## Getting Started
 - To explore the dashboard:
