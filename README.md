@@ -1,38 +1,44 @@
-# Sales Report Dashboard (2023–2024)
+# Sales Report 2023-2024
 
+## Project Overview
 This project is a comprehensive Excel dashboard that visualizes and analyzes product sales, profitability, and business trends for the years 2023–2024. It uses clean pivot logic, interactive filters, and formula-driven calculations to provide a decision-making tool for sales performance monitoring.
 
 ## Files Included
-
 - `Sales Report Dashboard.xlsx` — Excel workbook containing:
   - **Catalogue** – Master data for products and pricing
   - **Sales Report** – Raw transaction data
   - **Pivot** – Data summaries for the dashboard
   - **Dashboard** – Final visual analytics interface
+- `dashboard-preview.png` - Dashboard Screenshot
 
-## Key Features
+## Features / Highlights
+- **Trend Analysis**: Monthly profit trends with visual trendline indicating growth  
+- **Combo Chart**: Top 10 Profitable Products with average cost, revenue, and total profit per product  
+- **Data Table**: Top 10 Purchased Products with quantity sold, total profit, and profit per unit — color-coded for clarity  
+- **Bar Chart**: Average Unit Price across different product categories  
+- **Stacked Column Chart**: Payment Mode Analysis comparing cash vs. online by sales type  
+- **Interactive Filters**: Year and Sales Type slicers for dynamic and personalized exploration
 
-### Dashboard Components
-
-- **Profit Trend (Monthly)**  
-  Line chart showing how profit changes over time, with trendline indicating growth direction.
-
-- **Top 10 Profitable Products**  
-  Combo chart visualizing average cost/revenue alongside total profit per product.
-
-- **Top 10 Purchased Products**  
-  Table showing products with highest quantity sold, total profit, and profit per unit — color-coded for easy analysis.
-
-- **Average Unit Price by Category**  
-  Bar chart comparing price levels across product categories.
-
-- **Payment Mode Analysis**  
-  100% stacked column chart showing customer preference for cash or online payments by sales type.
-
-- **Interactive Filters**  
-  Slicers for Year and Sales Type allow dynamic views and easy exploration.
+## Tools & Technologies Used
+- Microsoft Excel 
+  - PivotTables and PivotCharts
+  - Conditional Formatting
+  - INDEX + MATCH lookup formulas
+  - Combo charts and trendlines
+  - Slicers for interactivity
 
 ## Calculations & Logic
+
+### Derived Fields 
+
+| Column            | Formula Example                             | Purpose                                 |
+|-------------------|---------------------------------------------|-----------------------------------------|
+| **Buying Value**  | `=Buying Price × QTY`                       | Total cost of items sold                |
+| **Selling Value** | `=Selling Price × QTY`                      | Total income from sales                 |
+| **Profit**        | `=Revenue – Cost`                           | Total gross profit                      |
+| **Profit/Unit**   | `=Profit / QTY`                             | Profit earned for each unit sold        |
+
+These metrics feed directly into pivot tables and dashboard charts.
 
 ### Price Lookup (INDEX + MATCH)
 
@@ -45,31 +51,18 @@ Product pricing (buying and selling) was dynamically pulled into the Sales Repor
 
 This acts as a substitute for XLOOKUP and ensures compatibility with older Excel versions.
 
-### Derived Fields in Sales Report
+## Key Insights / Observations
+- Profit peaked in March 2024 and showed a declining trend through May, as seen in the monthly profit line chart.
+- Product P0031 led both in quantity sold and profit, making it the top-performing product overall.
+- Wholesalers made the majority of purchases across both cash and online payments, with a clear preference for online mode.
+- Slicers allow filtering by year and sales type, enabling dynamic exploration of data patterns over time and by transaction mode.
 
-| Column            | Formula Example                             | Purpose                                 |
-|-------------------|---------------------------------------------|-----------------------------------------|
-| **Buying Value**  | `=Buying Price × QTY`                       | Total cost of items sold                |
-| **Selling Value** | `=Selling Price × QTY`                      | Total income from sales                 |
-| **Profit**        | `=Revenue – Cost`                           | Total gross profit                      |
-| **Profit/Unit**   | `=Profit / QTY`                             | Profit earned for each unit sold        |
+## Dashboard Preview 
+<img width="1867" height="628" alt="dashboard-preview" src="https://github.com/user-attachments/assets/3768df07-c066-43d3-a113-6beae9783817" />
 
-These metrics feed directly into pivot tables and dashboard charts.
-
-## Business Insights Enabled
-- Track monthly profit performance and trends
-- Identify high-demand vs. high-profit products
-- Discover low-margin bestsellers that may need repricing
-- Analyze payment behavior by customer segment
-- Monitor category pricing differences
-
-## Tools Used
-- Microsoft Excel 
-  - PivotTables and PivotCharts
-  - Conditional Formatting
-  - INDEX + MATCH lookup formulas
-  - Combo charts and trendlines
-  - Slicers for interactivity
+## Future Enhancements
+- Add KPI Cards: Total Sales, Average Order, Total Orders
+- Export to Power BI for advanced analytics
 
 ## Notes
 - A data model relationship has been created between the Sales Report and Catalogue tables via PRODUCT ID.
@@ -88,16 +81,5 @@ These metrics feed directly into pivot tables and dashboard charts.
 
 This helps align industry terminology with the visuals in the dashboard.
 
-
-## Getting Started
-- To explore the dashboard:
-- Open the Excel file.
-- Go to the Dashboard sheet.
-- Use the slicers (Year, Sales Type) to filter and analyze data.
-- Hover over charts or review tables to interpret insights.
-
-## Future Enhancements
-- Add KPI Cards: Total Sales, Average Order, Total Orders
-- Export to Power BI for advanced analytics
 
 
