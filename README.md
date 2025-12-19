@@ -1,7 +1,6 @@
-# Sales Report 2023-2024
+# Sales Performance Analysis (2023–2024) - Excel
 
-## Project Overview
-This project is a comprehensive Excel dashboard that visualizes and analyzes product sales, profitability, and business trends for the years 2023–2024. It uses clean pivot logic, interactive filters, and formula-driven calculations to provide a decision-making tool for sales performance monitoring.
+An Excel-based sales dashboard analyzing revenue, profit, product performance, and payment trends for 2023–2024 using PivotTables, dynamic formulas, and interactive slicers.
 
 ## Dashboard Preview 
 <img width="1867" height="628" alt="dashboard-preview" src="https://github.com/user-attachments/assets/3768df07-c066-43d3-a113-6beae9783817" />
@@ -53,12 +52,6 @@ Product pricing (buying and selling) was dynamically pulled into the Sales Repor
 ```
 
 This acts as a substitute for XLOOKUP and ensures compatibility with older Excel versions.
-
-## Key Insights / Observations
-- Profit peaked in March 2024 and showed a declining trend through May, as seen in the monthly profit line chart.
-- Product P0031 led both in quantity sold and profit, making it the top-performing product overall.
-- Wholesalers made the majority of purchases across both cash and online payments, with a clear preference for online mode.
-- Slicers allow filtering by year and sales type, enabling dynamic exploration of data patterns over time and by transaction mode.
 
 ## Future Enhancements
 - Add KPI Cards: Total Sales, Average Order, Total Orders
